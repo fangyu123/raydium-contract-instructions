@@ -272,6 +272,9 @@ pub struct SwapBaseIn<'info> {
     /// CHECK: Safe. amm open_orders Account
     #[account(mut)]
     pub amm_open_orders: UncheckedAccount<'info>,
+    /// CHECK: Safe. amm target_orders Account. To store plan orders infomations.
+    #[account(mut)]
+    pub amm_target_orders: UncheckedAccount<'info>,
     /// CHECK: Safe. amm_coin_vault Amm Account to swap FROM or To,
     #[account(mut)]
     pub amm_coin_vault: UncheckedAccount<'info>,
@@ -329,6 +332,9 @@ pub struct SwapBaseOut<'info> {
     /// CHECK: Safe. amm open_orders Account
     #[account(mut)]
     pub amm_open_orders: UncheckedAccount<'info>,
+    /// CHECK: Safe. amm target_orders Account. To store plan orders infomations.
+    #[account(mut)]
+    pub amm_target_orders: UncheckedAccount<'info>,
     /// CHECK: Safe. amm_coin_vault Amm Account to swap FROM or To,
     #[account(mut)]
     pub amm_coin_vault: UncheckedAccount<'info>,
